@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/mouse_trap.png" type="Texture" id=1]
+[ext_resource path="res://sounds/sounds/mouse_trapped.wav" type="AudioStream" id=2]
+[ext_resource path="res://scripts/mouseTrap.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "mouseTrap"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mouseTrap/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06, 0.1, 0.98 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mouseTrap/mouse_trapped_sound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="mouseTrap" type="AnimationPlayer"]
+playback_speed = 0.9
+anims/mouseTrap = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 287.25, 214.75 )
+scale = Vector2( 4.32707, 3.77434 )
+texture = ExtResource( 1 )
+vframes = 3
+
+[node name="mouse_trapped_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

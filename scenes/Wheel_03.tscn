@@ -1,0 +1,161 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://sprites/level2/out1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/level2/out2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/level2/out3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/level2/out4.png" type="Texture" id=4]
+[ext_resource path="res://scripts/wheel2_right.gd" type="Script" id=5]
+[ext_resource path="res://scripts/wheel2left.gd" type="Script" id=6]
+[ext_resource path="res://sprites/lever.png" type="Texture" id=7]
+[ext_resource path="res://sprites/red_line.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 105.576, 8.35619 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 110.441, 7.98177 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 112.468, 8.22532 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 44.1549, 5.22659 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 35.3257, 3.23497 )
+
+[node name="Wheel_03" type="Node2D"]
+
+[node name="out1" type="KinematicBody2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="out1" type="Sprite" parent="out1"]
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="out1"]
+scale = Vector2( 1.6, 1.6 )
+polygon = PoolVector2Array( -37.5, -151.875, -60, -144.375, -79.375, -134.375, -95, -124.375, -111.25, -109.375, -119.375, -100.625, -126.875, -91.25, -133.75, -80.625, -141.875, -65, -150, -45.625, -155, -25, -156.25, -3.125, -155.625, 20.625, -148.75, 51.875, -139.375, 75, -125, 95.625, -106.875, 115.625, -85.625, 132.5, -62.5, 145.625, -37.5, 153.125, -37.5, 163.75, -44.375, 161.875, -54.375, 158.75, -65, 155, -77.5, 149.375, -86.875, 143.75, -95.625, 138.125, -104.375, 131.25, -113.75, 123.125, -121.25, 116.25, -129.375, 106.875, -135.625, 98.75, -145, 83.125, -155.625, 63.125, -164.375, 36.25, -166.875, 10.625, -165.625, -21.875, -160.625, -46.25, -152.5, -66.875, -142.5, -85.625, -133.75, -99.375, -120.625, -114.375, -106.25, -128.75, -88.125, -141.25, -71.25, -150.625, -51.25, -158.75, -37.5, -161.875 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="out1"]
+rotation = -3.14159
+scale = Vector2( 1.6, 1.6 )
+polygon = PoolVector2Array( -37.5, -151.875, -60, -144.375, -79.375, -134.375, -95, -124.375, -111.25, -109.375, -119.375, -100.625, -126.875, -91.25, -133.75, -80.625, -141.875, -65, -150, -45.625, -155, -25, -156.25, -3.125, -155.625, 20.625, -148.75, 51.875, -139.375, 75, -125, 95.625, -106.875, 115.625, -85.625, 132.5, -62.5, 145.625, -37.5, 153.125, -37.5, 163.75, -44.375, 161.875, -54.375, 158.75, -65, 155, -77.5, 149.375, -86.875, 143.75, -95.625, 138.125, -104.375, 131.25, -113.75, 123.125, -121.25, 116.25, -129.375, 106.875, -135.625, 98.75, -145, 83.125, -155.625, 63.125, -164.375, 36.25, -166.875, 10.625, -165.625, -21.875, -160.625, -46.25, -152.5, -66.875, -142.5, -85.625, -133.75, -99.375, -120.625, -114.375, -106.25, -128.75, -88.125, -141.25, -71.25, -150.625, -51.25, -158.75, -37.5, -161.875 )
+
+[node name="lever" type="Sprite" parent="out1"]
+position = Vector2( -231, -24 )
+rotation = 1.6057
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="out2" type="KinematicBody2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="out2" type="Sprite" parent="out2"]
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="out2"]
+scale = Vector2( 1.6, 1.6 )
+polygon = PoolVector2Array( 25.625, -108.75, 16.875, -111.25, 8.125, -111.875, -1.25, -111.875, -16.25, -111.25, -26.25, -108.75, -38.125, -105, -48.125, -100.625, -58.125, -94.375, -68.75, -87.5, -76.25, -80.625, -85, -71.25, -91.875, -60.625, -99.375, -48.125, -104.375, -35.625, -107.5, -24.375, -109.375, -13.125, -110, 0, -109.375, 11.875, -108.125, 20, -116.25, 19.375, -117.5, 10, -117.5, -1.25, -116.875, -14.375, -115, -26.875, -111.875, -38.125, -107.5, -48.75, -102.5, -58.75, -95, -70.625, -85.625, -81.25, -76.875, -91.25, -68.75, -96.875, -58.75, -103.125, -48.125, -109.375, -38.75, -113.125, -28.125, -116.25, -14.375, -118.75, -2.5, -120, 8.75, -119.375, 19.375, -118.125, 26.875, -116.875 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="out2"]
+scale = Vector2( 1.6, 1.6 )
+polygon = PoolVector2Array( 61.875, -94.375, 69.375, -89.375, 76.25, -83.75, 83.75, -76.25, 90.625, -68.75, 96.25, -59.375, 101.875, -49.375, 106.875, -38.75, 110, -28.125, 111.25, -18.75, 119.375, -18.75, 117.5, -27.5, 115, -37.5, 112.5, -46.25, 109.375, -52.5, 105.625, -59.375, 101.875, -65.625, 97.5, -71.25, 91.875, -78.75, 86.875, -84.375, 80.625, -90, 73.75, -96.25, 65.625, -101.25, 62.5, -103.125 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="out2"]
+polygon = PoolVector2Array( -167, 88, -159, 101, -149, 116, -138, 128, -126, 141, -114, 150, -102, 159, -86, 169, -68, 177, -49, 183, -28, 188, -11, 190, 11, 190, 42, 187, 65, 180, 88, 170, 108, 159, 124, 147, 140, 133, 153, 118, 164, 103, 172, 88, 179, 74, 186, 55, 191, 38, 192, 28, 180, 28, 178, 39, 175, 50, 170, 64, 164, 78, 157, 91, 148, 104, 138, 117, 128, 127, 116, 138, 103, 148, 86, 157, 72, 165, 55, 170, 35, 174, 17, 178, -1, 178, -21, 176, -44, 171, -61, 166, -79, 158, -94, 150, -109, 140, -121, 128, -136, 113, -145, 100, -154, 87 )
+
+[node name="door" type="Sprite" parent="out2"]
+position = Vector2( -171.638, 24.7425 )
+rotation = 1.22173
+scale = Vector2( 0.288074, 0.775117 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="doorC" type="CollisionShape2D" parent="out2"]
+position = Vector2( -170.518, 59.3245 )
+rotation = 1.22173
+scale = Vector2( 0.298205, 0.775117 )
+shape = SubResource( 1 )
+
+[node name="door2" type="Sprite" parent="out2"]
+position = Vector2( 42, -190 )
+rotation = 0.349066
+scale = Vector2( 0.298205, 0.775117 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="door2C" type="CollisionShape2D" parent="out2"]
+position = Vector2( 70.8513, -168.47 )
+rotation = 0.349066
+scale = Vector2( 0.298205, 0.775117 )
+shape = SubResource( 2 )
+
+[node name="door3" type="Sprite" parent="out2"]
+position = Vector2( 197, -32 )
+rotation = 1.5708
+scale = Vector2( 0.26717, 0.775117 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="door3C" type="CollisionShape2D" parent="out2"]
+position = Vector2( 186.624, -1.04801 )
+rotation = 1.5708
+scale = Vector2( 0.26717, 0.775117 )
+shape = SubResource( 3 )
+
+[node name="lever" type="Sprite" parent="out2"]
+position = Vector2( 2, 160 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="out3" type="KinematicBody2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="out3" type="Sprite" parent="out3"]
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="out3"]
+polygon = PoolVector2Array( -101, -46, -105, -31, -109, -14, -109, 3, -107, 21, -104, 34, -97, 49, -90, 61, -83, 71, -70, 83, -57, 93, -44, 100, -32, 104, -18, 108, -3, 110, 10, 109, 27, 107, 43, 101, 58, 94, 71, 84, 82, 75, 91, 63, 101, 47, 107, 29, 111, 10, 111, -7, 109, -21, 104, -37, 99, -49, 93, -60, 88, -68, 78, -79, 67, -88, 55, -95, 44, -102, 29, -107, 12, -110, -3, -111, -19, -109, -32, -106, -45, -101, -47, -108, -37, -113, -24, -116, -10, -118, 4, -119, 22, -117, 37, -114, 50, -108, 63, -101, 76, -92, 85, -83, 98, -68, 108, -51, 112, -40, 117, -26, 118, -14, 119, -2, 118, 9, 117, 21, 114, 36, 108, 49, 98, 67, 87, 80, 77, 89, 68, 97, 59, 103, 49, 108, 37, 112, 20, 116, 4, 118, -10, 117, -25, 115, -39, 112, -52, 106, -67, 97, -80, 87, -93, 72, -103, 57, -110, 42, -114, 29, -117, 14, -117, 0, -117, -11, -115, -21, -113, -32, -110, -42, -108, -47 )
+
+[node name="door" type="Sprite" parent="out3"]
+position = Vector2( -114.009, -50.0594 )
+rotation = -0.750492
+scale = Vector2( 0.397205, 0.653846 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="out3"]
+position = Vector2( -73.6127, -75.0123 )
+rotation = -0.750492
+shape = SubResource( 4 )
+
+[node name="lever" type="Sprite" parent="out3"]
+position = Vector2( 62, 67 )
+rotation = -0.785398
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="out4" type="KinematicBody2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="out4" type="Sprite" parent="out4"]
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="out4"]
+scale = Vector2( 1.6, 1.6 )
+polygon = PoolVector2Array( 10.625, -24.375, 5.625, -25, 0.625, -25, -3.75, -24.375, -9.375, -21.25, -13.75, -18.125, -16.25, -14.375, -18.75, -10, -20.625, -4.375, -20.625, 1.25, -20, 6.875, -18.125, 11.875, -15.625, 15.625, -11.875, 18.75, -8.75, 20.625, -5.625, 22.5, -2.5, 23.75, 0.625, 24.375, 4.375, 25, 8.75, 24.375, 12.5, 23.125, 16.25, 21.25, 20, 18.75, 22.5, 18.125, 21.875, 20, 18.75, 22.5, 15, 25, 11.875, 26.25, 8.125, 27.5, 3.75, 27.5, 0.625, 26.875, -4.375, 26.25, -9.375, 23.75, -13.125, 20.625, -16.875, 17.5, -19.375, 13.125, -21.875, 8.75, -23.125, 3.125, -23.125, -2.5, -21.875, -9.375, -18.75, -15.625, -15, -20, -10.625, -23.125, -5.625, -25.625, 0, -26.875, 3.125, -26.875, 6.875, -26.875, 10, -26.25, 13.125, -25.625, 15, -25, 11.875, -23.75 )
+
+[node name="door" type="Sprite" parent="out4"]
+position = Vector2( 29, -5 )
+rotation = 1.39626
+scale = Vector2( 0.314622, 0.409648 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="out4"]
+position = Vector2( 28.7355, -3.88437 )
+rotation = 1.39626
+shape = SubResource( 5 )

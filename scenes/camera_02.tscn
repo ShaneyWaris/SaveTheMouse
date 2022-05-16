@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/level_01/LevelDesign.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 258.048
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 184.068
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 116.108
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 40.0
+
+[node name="camera_01" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Circle_Area1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle_Area1"]
+position = Vector2( 288, 402 )
+shape = SubResource( 1 )
+
+[node name="Circle_Area2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle_Area2"]
+position = Vector2( 288, 402 )
+shape = SubResource( 2 )
+
+[node name="Circle_Area3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle_Area3"]
+position = Vector2( 288, 400 )
+shape = SubResource( 3 )
+
+[node name="Circle_Area4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle_Area4"]
+position = Vector2( 293, 404 )
+shape = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 288, 512 )
+current = true
+
+[connection signal="body_entered" from="Circle_Area1" to="." method="_on_Circle_Area1_body_entered"]
+[connection signal="body_exited" from="Circle_Area1" to="." method="_on_Circle_Area1_body_exited"]
+[connection signal="body_entered" from="Circle_Area2" to="." method="_on_Circle_Area2_body_entered"]
+[connection signal="body_exited" from="Circle_Area2" to="." method="_on_Circle_Area2_body_exited"]
+[connection signal="body_entered" from="Circle_Area3" to="." method="_on_Circle_Area3_body_entered"]
+[connection signal="body_exited" from="Circle_Area3" to="." method="_on_Circle_Area3_body_exited"]
+[connection signal="body_entered" from="Circle_Area4" to="." method="_on_Circle_Area4_body_entered"]
+[connection signal="body_exited" from="Circle_Area4" to="." method="_on_Circle_Area4_body_exited"]

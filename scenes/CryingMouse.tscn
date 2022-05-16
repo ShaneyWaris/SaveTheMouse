@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/mouse_crying.png" type="Texture" id=1]
+[ext_resource path="res://sounds/sounds/mouse-squeaking-noise.mp3" type="AudioStream" id=2]
+[ext_resource path="res://scripts/CryingMouse.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "crying"
+length = 1.48
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[node name="CryingMouse" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="MouseCrying" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+hframes = 3
+frame = 2
+region_rect = Rect2( 0, 0, 130, 170 )
+
+[node name="crying" type="AnimationPlayer" parent="."]
+anims/crying = SubResource( 1 )

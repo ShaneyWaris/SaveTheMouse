@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lever_error.mp3-abd28be1ef23d8c4d2419e72e09b3701.mp3str"
+
+[deps]
+
+source_file="res://sounds/sounds/lever_error.mp3"
+dest_files=[ "res://.import/lever_error.mp3-abd28be1ef23d8c4d2419e72e09b3701.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

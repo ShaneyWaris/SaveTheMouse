@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/story_sound.mp3-a0d59dcef594fc95d4458d0ec9fffa03.mp3str"
+
+[deps]
+
+source_file="res://sounds/sounds/story_sound.mp3"
+dest_files=[ "res://.import/story_sound.mp3-a0d59dcef594fc95d4458d0ec9fffa03.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

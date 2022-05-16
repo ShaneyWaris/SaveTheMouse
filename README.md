@@ -10,3 +10,8 @@ This is an Independent project, Winter'22 done under Dr. Aman Samuel sir @IIIT D
 ### Platform Used:
 
 -   Godot (https://godotengine.org/)
+
+### APK File:
+
+-   Find the apk file [here](https://drive.google.com/file/d/14RFTX4FqTsSHWxR9hw6v-XAa55ISpAFl/view)
+-   Download it and enjoy the game!

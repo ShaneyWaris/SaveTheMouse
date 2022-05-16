@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/newspaper/cycle2.png" type="Texture" id=1]
+[ext_resource path="res://sprites/newspaper/newspaper.png" type="Texture" id=2]
+[ext_resource path="res://sprites/newspaper/cycle1.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Paper_throwing.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Paper_throwing"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("paper_position:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 2, 1 ),
+"update": 1,
+"values": [ Vector2( 45, 21 ), Vector2( 25, -87 ), Vector2( -96, -266 ) ]
+}
+
+[node name="Paper_throwing" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+anims/Paper_throwing = SubResource( 1 )
+
+[node name="texture" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="paper_position" type="Sprite" parent="."]
+position = Vector2( 45, 21 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )

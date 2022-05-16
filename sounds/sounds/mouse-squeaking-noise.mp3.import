@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mouse-squeaking-noise.mp3-15ccb66fe23b7e55ac6aa8df636015ad.mp3str"
+
+[deps]
+
+source_file="res://sounds/sounds/mouse-squeaking-noise.mp3"
+dest_files=[ "res://.import/mouse-squeaking-noise.mp3-15ccb66fe23b7e55ac6aa8df636015ad.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
