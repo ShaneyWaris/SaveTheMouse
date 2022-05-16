@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/Player_(Kinematicsbody2d).tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/camera_trial.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 263, 308 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 209.5, 233.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 147.5, 165 )
+
+[node name="camera_trial" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 576.0
+margin_bottom = 1024.0
+
+[node name="Area2D_1" type="Area2D" parent="ColorRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D_1"]
+position = Vector2( 290, 327 )
+shape = SubResource( 1 )
+
+[node name="Area2D_2" type="Area2D" parent="ColorRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D_2"]
+position = Vector2( 288.5, 315.5 )
+shape = SubResource( 2 )
+
+[node name="Area2D_3" type="Area2D" parent="ColorRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D_3"]
+position = Vector2( 288.5, 303 )
+shape = SubResource( 3 )
+
+[node name="tile" parent="ColorRect" instance=ExtResource( 2 )]
+position = Vector2( 289, 878 )
+scale = Vector2( 1.6, 1.5 )
+
+[node name="player" parent="ColorRect" instance=ExtResource( 1 )]
+position = Vector2( 459, 695 )
+
+[node name="tile2" parent="ColorRect" instance=ExtResource( 2 )]
+position = Vector2( 183, 645 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 288, 512 )
+current = true
+
+[connection signal="body_entered" from="ColorRect/Area2D_1" to="." method="_on_Area2D_1_body_entered"]
+[connection signal="body_exited" from="ColorRect/Area2D_1" to="." method="_on_Area2D_1_body_exited"]
